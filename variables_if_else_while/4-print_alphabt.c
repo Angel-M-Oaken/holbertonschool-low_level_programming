@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * main - prints lowercase alphabet
+ * main - prints lowercase alphabet without q and e
  * Return: Always 0 (Success)
  */
 int main(void)
