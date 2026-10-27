@@ -8,14 +8,12 @@
  */
 int option_handling(int option)
 {
+	printf("Choice : %d\n", option);
 	if (option >= 0 && option <= 4)
-	{
-		printf("Choice : %d\n", option);
 		return (option);
-	}
 	else
 	{
-		printf("%d is not a valid option.\n", option);
+		printf("Invalid choice\n");
 		return (-1);
 	}
 }
@@ -41,19 +39,21 @@ void print_menu(void)
 int main(void)
 {
 	int input;
-	int option;
+	int option = -1;
 
 	print_menu();
-	scanf("%d", &input);
-	option = option_handling(input);
-	switch (option)
+	while (option != 0)
 	{
-	case 0:
-		printf("Bye!\n");
-		break;
-	default:
-		printf("WIP\n");
-		break;
+		scanf("%d", &input);
+		option = option_handling(input);
+		switch (option)
+		{
+		case 0:
+			printf("Bye!\n");
+			break;
+		default:
+			break;
+		}
 	}
 	return (0);
 }
