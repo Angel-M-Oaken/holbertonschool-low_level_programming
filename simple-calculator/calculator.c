@@ -1,11 +1,5 @@
 #include "main.h"
 
-
-/**
- * option_handling - Checks if option selection is valid
- * @option: input from scanf
- * Return: if input is valid return option, else -1
- */
 int option_handling(int option)
 {
 	printf("Choice : %d\n", option);
@@ -19,20 +13,6 @@ int option_handling(int option)
 }
 
 /**
- * print_menu -  Display a simple menu
- */
-void print_menu(void)
-{
-	printf("Simple Calculator\n");
-	printf("1) Add\n");
-	printf("2) Substract\n");
-	printf("3) Multiply\n");
-	printf("4) Divide\n");
-	printf("0) Quit\n");
-}
-
-
-/**
  * main -  Skeleton of the simple calculator
  * Return: Always 0 (Success)
  */
@@ -40,17 +20,31 @@ int main(void)
 {
 	int input;
 	int option = -1;
+	int a;
+	int b;
 
-	print_menu();
+	printf("Simple Calculator\n");
+	printf("1) Add\n2) Substract\n3) Multiply\n4) Divide\n0) Quit\n");
 	while (option != 0)
 	{
 		scanf("%d", &input);
-		option = option_handling(input);
+		printf("Choice : %d\n", input);
+		if (input >= 0 && input <= 4)
+			option = input;
+		else
+			printf("Invalid choice\n");
 		switch (option)
 		{
 		case 0:
 			printf("Bye!\n");
 			break;
+		case 1:
+			printf("A: ");
+			scanf("%d", &a);
+			printf("B: ");
+			scanf("%d", &b);
+			printf("Result: %d\n", (a + b));
+			return (0);
 		default:
 			break;
 		}
