@@ -45,6 +45,13 @@ int main(void)
 			scanf("%d", &b);
 			printf("Result: %d\n", (a + b));
 			return (0);
+		case 2:
+			printf("A: ");
+			scanf("%d", &a);
+			printf("B: ");
+			scanf("%d", &b);
+			printf("Result: %d\n", (a - b));
+			return (0);
 		default:
 			break;
 		}
