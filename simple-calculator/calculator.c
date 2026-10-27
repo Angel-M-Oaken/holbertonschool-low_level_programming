@@ -1,17 +1,5 @@
 #include "main.h"
 
-int option_handling(int option)
-{
-	printf("Choice : %d\n", option);
-	if (option >= 0 && option <= 4)
-		return (option);
-	else
-	{
-		printf("Invalid choice\n");
-		return (-1);
-	}
-}
-
 /**
  * main -  Skeleton of the simple calculator
  * Return: Always 0 (Success)
@@ -58,6 +46,16 @@ int main(void)
 			printf("B: ");
 			scanf("%d", &b);
 			printf("Result: %d\n", (a * b));
+			return (0);
+		case 4:
+			printf("A: ");
+			scanf("%d", &a);
+			printf("B: ");
+			scanf("%d", &b);
+			if (b == 0)
+				printf("Error: division by zero\n");
+			else
+				printf("Result: %d\n", (a / b));
 			return (0);
 		default:
 			break;
