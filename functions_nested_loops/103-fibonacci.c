@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
@@ -9,9 +8,8 @@ int main(void)
 {
 	long a = 1;
 	long b = 2;
-	long tmp;
+	long tmp = 0;
 	long res = 0;
-	int i;
 
 	while (tmp < 4000000)
 	{
