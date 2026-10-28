@@ -12,12 +12,15 @@ int main(void)
 	long tmp;
 	int i;
 
-	for (i = 0; i <= 50; i++)
+	for (i = 0; i < 50; i++)
 	{
 		tmp = a;
 		a = b;
 		b += tmp;
-		printf("%ld\n", tmp);
+		printf("%ld", tmp);
+		if (i != 49)
+			printf(", ");
 	}
+	printf("\n");
 	return (0);
 }
