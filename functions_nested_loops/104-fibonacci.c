@@ -17,7 +17,7 @@ int main(void)
 		tmp = a;
 		a = b;
 		b += tmp;
-		printf("%.0lf", tmp);
+		printf("%.0f", tmp);
 		if (i != 97)
 			printf(", ");
 	}
