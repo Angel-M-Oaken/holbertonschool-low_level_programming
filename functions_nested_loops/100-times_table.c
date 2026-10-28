@@ -28,30 +28,28 @@ void put_nbr(int n)
  */
 void print_times_table(int n)
 {
-    int x = 0;
-    int y = 0;
-    int tmp;
+	int x = 0;
+	int y = 0;
+	int tmp;
 
-    if (n < 0 || n > 15)
-        return;
-
-    for (x = 0; x <= n; x++)
-    {
-        for (y = 0; y <= n; y++)
-        {
-            tmp = x * y;
-            if (y > 0)
-            {
-                _putchar(',');
-                _putchar(' ');
+	if (n < 0 || n > 15)
+		return;
+	for (x = 0; x <= n; x++)
+	{
+		for (y = 0; y <= n; y++)
+		{
+			tmp = x * y;
+			if (y > 0)
+			{
+				_putchar(',');
+				_putchar(' ');
             }
-            if (y > 0 && tmp < 10)
-                _putchar(' ');
-            if (y > 0 && tmp < 100)
-                _putchar(' ');
-
-            put_nbr(tmp);
+			if (y > 0 && tmp < 10)
+				_putchar(' ');
+			if (y > 0 && tmp < 100)
+				_putchar(' ');
+			put_nbr(tmp);
         }
-        _putchar('\n');
-    }
+		_putchar('\n');
+	}
 }
